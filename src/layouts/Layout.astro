@@ -1,0 +1,40 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Find the best BBQ joints across America" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <header class="bg-bbq-red text-white py-4">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center">
+          <h1 class="text-2xl font-bold">Smokehouse List</h1>
+          <nav>
+            <ul class="flex space-x-6">
+              <li><a href="/" class="hover:text-gray-200">Home</a></li>
+              <li><a href="/about" class="hover:text-gray-200">About</a></li>
+              <li><a href="/top-rated" class="hover:text-gray-200">Top Rated</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <slot />
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <p class="text-center">&copy; 2024 Smokehouse List. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  city: string;
+  state: string;
+  rating: number;
+  priceRange: string;
+  specialty: string;
+  imageUrl: string;
+  waitTime?: string;
+  established?: number;
+}
+
+const { id, name, city, state, rating, priceRange, specialty, imageUrl, waitTime, established } = Astro.props;
+---
+
+<div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+  <div class="relative h-48">
+    <img src={imageUrl} alt={name} class="w-full h-full object-cover" />
+    <div class="absolute top-2 right-2 bg-white px-2 py-1 rounded-full">
+      <span class="text-bbq-red font-bold">{rating}/5</span>
+    </div>
+    {established && (
+      <div class="absolute bottom-2 left-2 bg-black bg-opacity-70 px-2 py-1 rounded-full">
+        <span class="text-white text-sm">Est. {established}</span>
+      </div>
+    )}
+  </div>
+  <div class="p-4">
+    <h3 class="text-xl font-bold text-gray-900">{name}</h3>
+    <p class="text-gray-600">{city}, {state}</p>
+    <div class="mt-2 flex items-center justify-between">
+      <span class="text-sm text-gray-500">{priceRange}</span>
+      <span class="text-sm font-medium text-bbq-brown">{specialty}</span>
+    </div>
+    {waitTime && (
+      <div class="mt-2 text-sm text-gray-600">
+        <span>⏰ Average wait: {waitTime}</span>
+      </div>
+    )}
+    <div class="mt-4">
+      <a 
+        href={`/reviews/${id}`}
+        class="text-bbq-red hover:text-bbq-brown transition-colors duration-200"
+      >
+        Read Reviews →
+      </a>
+    </div>
+  </div>
+</div>

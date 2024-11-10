@@ -1,0 +1,67 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const restaurants = await getCollection("restaurants");
+
+  return restaurants.map((restaurant) => {
+    return {
+      params: { restaurant: restaurant.data.id },
+      props: { restaurant },
+    };
+  });
+}
+
+const { restaurant } = Astro.props;
+const review = await getEntry("reviews", restaurant.id);
+const { Content } = await review.render();
+---
+
+<Layout title={`Reviews for ${restaurant.data.name} - Smokehouse List`}>
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <a href="/" class="text-bbq-red hover:text-bbq-brown"
+        >← Back to Restaurants</a
+      >
+    </div>
+
+    <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <img
+          src={restaurant.data.imageUrl}
+          alt={restaurant.data.name}
+          class="w-24 h-24 object-cover rounded-lg"
+        />
+        <div>
+          <h1 class="text-3xl font-bold text-gray-900">
+            {restaurant.data.name}
+          </h1>
+          <p class="text-gray-600">
+            {restaurant.data.city}, {restaurant.data.state}
+          </p>
+        </div>
+      </div>
+      <p class="text-gray-700">{restaurant.data.description}</p>
+    </div>
+
+    <div class="space-y-8">
+      <article class="bg-white rounded-lg shadow-lg p-6">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h2 class="text-xl font-bold text-gray-900">{review.data.title}</h2>
+            <p class="text-gray-600">
+              By {review.data.author} on {review.data.visitDate}
+            </p>
+          </div>
+          <div class="bg-bbq-red text-white px-3 py-1 rounded-full">
+            {review.data.rating}/5
+          </div>
+        </div>
+        <div class="prose max-w-none">
+          <Content />
+        </div>
+      </article>
+    </div>
+  </main>
+</Layout>

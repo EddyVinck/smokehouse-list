@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import FilterBar from '../components/FilterBar.astro';
+import RestaurantCard from '../components/RestaurantCard.astro';
+
+const restaurants = await getCollection('restaurants');
+---
+
+<Layout title="Smokehouse List - Discover America's Best BBQ Joints">
+  <main>
+    <FilterBar />
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {restaurants.map(restaurant => (
+          <RestaurantCard {...restaurant.data} />
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    min-height: calc(100vh - 64px - 96px);
+  }
+</style>
