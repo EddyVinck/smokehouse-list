@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: "#e39e6d",
         "bbq-red": "#D94E41",
         "bbq-brown": "#8B4513",
       },

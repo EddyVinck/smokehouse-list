@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import logo from "../assets/img/smokehouse-list-logo.png";
+
 interface Props {
   title: string;
 }
@@ -19,17 +22,20 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="bg-gray-100 min-h-screen">
-    <header class="bg-bbq-red text-white py-4">
+    <header class="bg-primary text-white py-4">
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center">
-          <h1 class="text-2xl font-bold">Smokehouse List</h1>
-          <nav>
+          <a href="/" class="mx-auto block">
+            <Image src={logo} alt="Smokehouse List logo" class="w-24 md:w-48" />
+          </a>
+          <!-- <h1 class="text-2xl font-bold">Smokehouse List</h1> -->
+          <!-- <nav>
             <ul class="flex space-x-6">
-              <li><a href="/" class="hover:text-gray-200">Home</a></li>
-              <!-- <li><a href="/about" class="hover:text-gray-200">About</a></li> -->
-              <!-- <li><a href="/top-rated" class="hover:text-gray-200">Top Rated</a></li> -->
+              <li><a href="/" class="hover:text-gray-200">Home</a></li> -->
+          <!-- <li><a href="/about" class="hover:text-gray-200">About</a></li> -->
+          <!-- <li><a href="/top-rated" class="hover:text-gray-200">Top Rated</a></li>
             </ul>
-          </nav>
+          </nav> -->
         </div>
       </div>
     </header>
