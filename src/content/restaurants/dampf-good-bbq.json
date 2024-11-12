@@ -1,0 +1,14 @@
+{
+  "id": "dampf-good-bbq",
+  "name": "Dampf Good BBQ",
+  "city": "Cary",
+  "state": "NC",
+  "country": "USA",
+  "rating": 4.5,
+  "priceRange": "$30-$60",
+  "imageUrl": "./img/dampf-good-bbq-food-truck.jpeg",
+  "description": "Possibly the best Texas style barbecue in North Carolina.",
+  "waitTime": "1 hour",
+  "established": 2021,
+  "website": "https://www.dampfgoodbbq.com/"
+}

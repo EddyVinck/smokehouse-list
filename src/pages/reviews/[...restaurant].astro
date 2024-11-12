@@ -1,6 +1,8 @@
 ---
 import { getCollection, getEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
 export async function getStaticPaths() {
   const restaurants = await getCollection("restaurants");
@@ -14,6 +16,7 @@ export async function getStaticPaths() {
 }
 
 const { restaurant } = Astro.props;
+
 const review = await getEntry("reviews", restaurant.id);
 const { Content } = await review.render();
 ---
@@ -26,23 +29,31 @@ const { Content } = await review.render();
       >
     </div>
 
-    <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-      <div class="flex items-center gap-4 mb-4">
-        <img
-          src={restaurant.data.imageUrl}
+    <div class="bg-white relative rounded-lg shadow-lg p-6 mb-8 h-80">
+      <div class="absolute inset-0">
+        <Image
+          src={restaurant.data.imageUrl as ImageMetadata}
           alt={restaurant.data.name}
-          class="w-24 h-24 object-cover rounded-lg"
+          class="object-cover w-full h-full brightness-[30%]"
         />
-        <div>
-          <h1 class="text-3xl font-bold text-gray-900">
+      </div>
+      <div
+        class="flex flex-col justify-between items-between h-full gap-4 mb-4 relative z-10"
+      >
+        <div class="w-full text-center pt-28">
+          <h1 class="text-3xl font-bold text-slate-50">
             {restaurant.data.name}
           </h1>
-          <p class="text-gray-600">
+          <p class="text-gray-400">
             {restaurant.data.city}, {restaurant.data.state}
           </p>
         </div>
+        <div class="w-full">
+          <p class="text-slate-300 relative z-10">
+            {restaurant.data.description}
+          </p>
+        </div>
       </div>
-      <p class="text-gray-700">{restaurant.data.description}</p>
     </div>
 
     <div class="space-y-8">
@@ -55,7 +66,7 @@ const { Content } = await review.render();
             </p>
           </div>
           <div class="bg-bbq-red text-white px-3 py-1 rounded-full">
-            {review.data.rating}/5
+            {restaurant.data.rating}/5
           </div>
         </div>
         <div class="prose max-w-none">

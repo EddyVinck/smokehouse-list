@@ -1,0 +1,14 @@
+{
+  "id": "cattleack-barbecue",
+  "name": "Cattleack Barbecue",
+  "city": "Farmers Branch",
+  "state": "TX",
+  "country": "USA",
+  "rating": 5,
+  "priceRange": "$40-$60",
+  "imageUrl": "./img/cattleack-barbecue.jpeg",
+  "description": "The wagyu brisket is really good!",
+  "waitTime": "1-2 hours",
+  "established": 2010,
+  "website": "https://cattleackbbq.com/"
+}

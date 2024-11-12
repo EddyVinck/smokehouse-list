@@ -1,0 +1,14 @@
+{
+  "id": "helberg-barbecue",
+  "name": "Helberg Barbecue",
+  "city": "Woodway",
+  "state": "TX",
+  "country": "USA",
+  "rating": 4,
+  "priceRange": "$20-$40",
+  "imageUrl": "./img/helberg-food-truck.jpeg",
+  "description": "Great BBQ. Wear shoes you don't mind getting dirty.",
+  "waitTime": "15 minutes",
+  "established": 2017,
+  "website": "https://www.helbergbarbecue.com/"
+}

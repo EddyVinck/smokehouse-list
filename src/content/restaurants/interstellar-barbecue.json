@@ -1,0 +1,14 @@
+{
+  "id": "interstellar-barbecue",
+  "name": "Interstellar Barbecue",
+  "city": "Austin",
+  "state": "TX",
+  "country": "USA",
+  "rating": 4,
+  "priceRange": "$40-$60",
+  "imageUrl": "./img/interstellar.jpeg",
+  "description": "The best peach glazed pork belly",
+  "waitTime": "1-2 hours",
+  "established": 2019,
+  "website": "https://www.theinterstellarbbq.com/"
+}

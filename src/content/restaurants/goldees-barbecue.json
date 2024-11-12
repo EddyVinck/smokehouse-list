@@ -1,0 +1,14 @@
+{
+  "id": "goldees-barbecue",
+  "name": "Goldee's Barbecue",
+  "city": "Fort Worth",
+  "state": "TX",
+  "country": "USA",
+  "rating": 5,
+  "priceRange": "$50-$150",
+  "imageUrl": "./img/goldees.jpeg",
+  "description": "Worth the wait.",
+  "waitTime": "2-4 hours",
+  "established": 2020,
+  "website": "https://goldeesbbq.com/"
+}

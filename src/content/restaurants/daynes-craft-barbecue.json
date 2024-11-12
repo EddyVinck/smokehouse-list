@@ -1,0 +1,14 @@
+{
+  "id": "daynes-craft-barbecue",
+  "name": "Dayne's Craft Barbecue",
+  "city": "Aledo",
+  "state": "TX",
+  "country": "USA",
+  "rating": 3.5,
+  "priceRange": "$40-$60",
+  "imageUrl": "./img/daynes-craft-bbq.jpeg",
+  "description": "Great peppery brisket, which you should eat last.",
+  "waitTime": "30 minutes",
+  "established": 2018,
+  "website": "https://daynescraftbarbecue.com/"
+}

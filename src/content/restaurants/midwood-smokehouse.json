@@ -1,0 +1,14 @@
+{
+  "id": "midwood-smokehouse",
+  "name": "Midwood Smokehouse",
+  "city": "Raleigh",
+  "state": "NC",
+  "country": "USA",
+  "rating": 2.5,
+  "priceRange": "$30-$50",
+  "imageUrl": "./img/midwood-smokehouse-plate.jpeg",
+  "description": "The full menu is available even in the evening",
+  "waitTime": "1-2 hours",
+  "established": 2011,
+  "website": "https://midwoodsmokehouse.com/"
+}

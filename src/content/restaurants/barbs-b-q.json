@@ -1,0 +1,14 @@
+{
+  "id": "barbs-b-q",
+  "name": "Barbs B Q",
+  "city": "Lockhart",
+  "state": "TX",
+  "country": "USA",
+  "rating": 5,
+  "priceRange": "$30-$50",
+  "imageUrl": "../restaurants/img/barbsbq.jpeg",
+  "description": "A women-owned BBQ spot with Mexican influences",
+  "waitTime": "1-2 hours",
+  "established": 2023,
+  "website": "https://www.barbsbq.com/"
+}

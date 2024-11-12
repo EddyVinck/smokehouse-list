@@ -1,0 +1,14 @@
+{
+  "id": "panther-city-bbq",
+  "name": "Panther City BBQ",
+  "city": "Fort Worth",
+  "state": "TX",
+  "country": "USA",
+  "rating": 4,
+  "priceRange": "$35-$55",
+  "imageUrl": "./img/panther-city-tray-1.jpeg",
+  "description": "Great Mexican influences",
+  "waitTime": "1-2 hours",
+  "established": 2014,
+  "website": "https://www.panthercitybbq.com/"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "coopers-barbecue",
+  "name": "Cooper's Old Time Pit Bar-B-Que",
+  "city": "Fort Worth",
+  "state": "TX",
+  "country": "USA",
+  "rating": 2,
+  "priceRange": "$20-$35",
+  "imageUrl": "./img/coopers.jpeg",
+  "description": "The food was a little dry in the afternoon. Maybe go here earlier in the day.",
+  "waitTime": "1-2 hours",
+  "established": 1962,
+  "website": "https://coopersbbqfortworth.com/"
+}
