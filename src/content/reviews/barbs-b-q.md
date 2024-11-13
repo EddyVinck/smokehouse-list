@@ -22,4 +22,4 @@ For the desert we had the chocolate pudding with cookie crumble, and it was amaz
 
 It wouldn't surprise me if Barbs-B-Q ends up taking a top 10 spot on Texas Monthly's next top 50 list. It was _that good_.
 
-<!-- ![Barbs B Q tray of food](../restaurants/img/barbsbq-tray.jpeg) -->
+![Barbs B Q tray of food](../restaurants/img/barbsbq-tray.jpeg)
